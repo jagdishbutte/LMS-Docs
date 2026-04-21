@@ -1,4 +1,3 @@
-Here are the rough, text-based line diagrams representing the UI pages based on your specifications. 
 
 ### 1. Authentication Pages
 
