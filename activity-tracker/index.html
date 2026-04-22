@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Interactive multi-metric activity tracker dashboard for wellness and expense monitoring">
+  <title>Activity Tracker — Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+  <div class="app-layout">
+
+    <!-- HEADER -->
+    <header class="header" id="appHeader">
+      <div class="header-left">
+        <div class="logo-icon">⚡</div>
+        <span class="app-title">ACTIVITY TRACKER</span>
+      </div>
+      <div class="user-menu">
+        <button class="notif-btn" id="notifBtn" title="Notifications">🔔</button>
+        <div class="avatar" title="User Profile">JD</div>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav-list">
+        <li class="nav-item active" id="navDashboard">
+          <span class="icon">📊</span> Dashboard
+        </li>
+        <li class="nav-item" id="navDailyLog">
+          <span class="icon">📝</span> Daily Log
+        </li>
+        <li class="nav-item" id="navAnalytics">
+          <span class="icon">📈</span> Analytics
+        </li>
+        <li class="nav-item" id="navExpenses">
+          <span class="icon">💰</span> Expenses
+        </li>
+        <li class="nav-item" id="navJournal">
+          <span class="icon">📓</span> Journal
+        </li>
+      </ul>
+      <div class="nav-section-title">Settings</div>
+      <ul class="nav-list">
+        <li class="nav-item" id="navAdmin">
+          <span class="icon">⚙️</span> Admin
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+      <h1 class="page-title">Dashboard</h1>
+      <p class="page-subtitle">Your wellness & expense overview — April 2026</p>
+
+      <!-- CONTROLS -->
+      <div class="controls-bar" id="controlsBar">
+        <div class="control-group">
+          <span class="control-label">Timeframe</span>
+          <div class="timeframe-btns">
+            <button class="tf-btn active" data-days="7" id="tf7">7 Days</button>
+            <button class="tf-btn" data-days="30" id="tf30">30 Days</button>
+          </div>
+        </div>
+        <div class="control-group">
+          <span class="control-label">Metrics</span>
+          <div class="metric-filters" id="metricFilters">
+            <button class="metric-chip" data-metric="steps" id="chipSteps">
+              <span class="dot"></span> Steps
+            </button>
+            <button class="metric-chip" data-metric="water" id="chipWater">
+              <span class="dot"></span> Water
+            </button>
+            <button class="metric-chip" data-metric="sleep" id="chipSleep">
+              <span class="dot"></span> Sleep
+            </button>
+            <button class="metric-chip" data-metric="expenses" id="chipExpenses">
+              <span class="dot"></span> Expenses
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUMMARY CARDS -->
+      <div class="summary-cards" id="summaryCards"></div>
+
+      <!-- CHARTS -->
+      <div class="charts-grid" id="chartsGrid"></div>
+
+      <!-- AI INSIGHTS -->
+      <section class="insights-section" id="insightsSection">
+        <div class="insights-title">
+          AI Insights <span class="ai-badge">AI</span>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-sleep);"></div>
+          <div class="insight-text">You slept <strong>1 hr less</strong> than your weekly average. Consider winding down
+            earlier tonight.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-expenses);"></div>
+          <div class="insight-text">Spending is <strong>down 15%</strong> this week! Keep it up — you're on track for
+            your monthly goal.</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-steps);"></div>
+          <div class="insight-text">Your step count peaked on Wednesday at <strong>12,450 steps</strong>. Try to
+            maintain that momentum!</div>
+        </div>
+        <div class="insight-item">
+          <div class="insight-dot" style="background: var(--accent-water);"></div>
+          <div class="insight-text">Water intake averaged <strong>2.3 L/day</strong> — slightly below the recommended
+            2.5 L target.</div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
