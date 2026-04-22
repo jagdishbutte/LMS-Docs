@@ -25,7 +25,7 @@ The system follows a **hybrid approach**:
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│                 Spring Boot Backend                   │
+│                 Spring Boot Backend                  │
 │                                                      │
 │   User Request → Data Aggregation → AI Integration   │
 │                                                      │
@@ -47,14 +47,14 @@ The system follows a **hybrid approach**:
                                           REST API     │
                                                        ▼
                                     ┌──────────────────────┐
-                                    │   AI Service          │
-                                    │   (Python FastAPI)    │
+                                    │   AI Service         │
+                                    │   (Python FastAPI)   │
                                     │                      │
                                     │   ┌──────────────┐   │
                                     │   │  LLM Engine  │   │
                                     │   └──────────────┘   │
                                     │   ┌──────────────┐   │
-                                    │   │  RAG Pipeline │   │
+                                    │   │  RAG Pipeline│   │
                                     │   └──────────────┘   │
                                     │   ┌──────────────┐   │
                                     │   │  Vector DB   │   │
