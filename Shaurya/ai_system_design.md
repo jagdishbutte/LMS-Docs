@@ -1,4 +1,3 @@
-# 🤖 AI System Design — AI-Based Lifestyle Intelligence Platform
 
 ### Owner: Shaurya (Design) + Jagdish (Integration)
 ### Approach: Hybrid — Rule-Based (Phase 1) + LLM-Powered (Phase 2) + RAG Chatbot (Phase 3)
